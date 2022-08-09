@@ -19,7 +19,7 @@ export class StudentController {
   }
 
   @Get(':index')
-  getSpecificStudent(@Param() index) {
+  getSpecificStudent(@Param('index') index) {
     return this.studentService.getSpecificStudent(index);
   }
 
@@ -34,7 +34,7 @@ export class StudentController {
   }
 
   @Patch(':id')
-  updateStudent(@Param() id, @Body() student) {
+  updateStudent(@Param('id') id, @Body() student) {
     return this.studentService.updateStudent(id, student);
   }
 }
